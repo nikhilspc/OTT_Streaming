@@ -14,6 +14,8 @@ export default function Login() {
       const res = await api.post('token/', { username, password });
       localStorage.setItem('access', res.data.access);
       localStorage.setItem('refresh', res.data.refresh);
+      localStorage.setItem('username', res.data.username);   // ← naya
+      localStorage.setItem('role', res.data.role); 
       navigate('/');
     } catch (err) {
       setError('Invalid username or password');

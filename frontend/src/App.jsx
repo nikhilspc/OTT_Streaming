@@ -5,6 +5,8 @@ import Register from './pages/Register';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 import './App.css';
+import Subscribe from './pages/Subscribe';
+import Dashboard from './admin/Dashboard';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/subscribe" element={<Subscribe />} />
+        <Route path="/admin" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
